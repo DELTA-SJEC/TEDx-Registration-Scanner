@@ -1,4 +1,4 @@
-# tedx_reg
+# TEDxSJEC
 
 A new Flutter project.
 
