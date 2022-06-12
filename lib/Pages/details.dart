@@ -17,7 +17,7 @@ class Details extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    order_id = data['paymentData']['response']['items'][0]['order_id'];
+    order_id = data['paymentData']['image'];
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black,
@@ -27,19 +27,19 @@ class Details extends StatelessWidget {
           children: [
             Center(
               child: SizedBox(
-                height: 220,
+                height: 320,
                 width: 300,
                 child: Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(2000),
                     border: Border.all(
                       color: Colors.white,
                       width: 2,
                     ),
                     image: DecorationImage(
                         image: NetworkImage(
-                            "https://ted.vigneshcodes.in/storage/image/$order_id.png"),
-                        fit: BoxFit.cover),
+                            "https://tedxsjec-2022.vigneshcodes.in$order_id"),
+                        fit: BoxFit.contain),
                   ),
                 ),
               ),

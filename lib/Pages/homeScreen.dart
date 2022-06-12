@@ -24,7 +24,7 @@ var id;
 Future CheckCode(id) async {
   try {
     response = await dio.post(
-      'https://ted.vigneshcodes.in/api/payment/flag?id=$id',
+      'https://tedxsjec-2022.vigneshcodes.in/api/payment/flag?id=$id',
       options: Options(
         headers: {
           'Authorization': token,

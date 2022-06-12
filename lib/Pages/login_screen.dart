@@ -24,8 +24,8 @@ Future login(email, password) async {
     'password': password,
   });
 
-  response =
-      await dio.post('https://ted.vigneshcodes.in/api/login', data: formData);
+  response = await dio.post('https://tedxsjec-2022.vigneshcodes.in/api/login',
+      data: formData);
 
   print(response.data);
 }
@@ -150,8 +150,6 @@ class _LoginState extends State<Login> {
                                   SharedPreferences prefs =
                                       await SharedPreferences.getInstance();
                                   prefs.setString('token', token);
-
-                                  print('im here');
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
@@ -187,12 +185,5 @@ class _LoginState extends State<Login> {
         )),
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    email.dispose();
-    password.dispose();
-    super.dispose();
   }
 }
